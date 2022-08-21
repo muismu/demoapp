@@ -8,5 +8,5 @@ import (
 
 func ShowUserAuthInfo(c *gin.Context) {
 	user := c.MustGet(gin.AuthUserKey).(string)
-	c.JSON(http.StatusOK, gin.H{"User": user})
+	c.HTML(http.StatusOK, "DisplayJson.tmpl", gin.H{"User": user, "Headers": c.Request.Header})
 }

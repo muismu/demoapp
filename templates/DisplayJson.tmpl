@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <pre id="myData" ></pre>
+  <script>
+    var data = {{ . }};
+    document.getElementById("myData").innerHTML = JSON.stringify(data, null, 4);
+  </script>
+</body>
+</html>
